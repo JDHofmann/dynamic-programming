@@ -10,11 +10,8 @@
 // }
 
 const fib = (n, memo = {}) => {
-    console.log(`n: ${n}`)
-    console.log(memo)
     if ( n in memo ) return memo[n];
     if ( n <= 2) return 1;
-
     memo[n] = fib(n -1, memo) + fib(n -2, memo);
     return memo[n];
 }
@@ -24,6 +21,6 @@ let app = document.querySelector("#app")
 
 let result = document.createElement('h1');
 
-result.innerHTML = `Result: ${fib(3)}`
+result.innerHTML = `Result: ${fib(5)}`
 
 app.append(result)
